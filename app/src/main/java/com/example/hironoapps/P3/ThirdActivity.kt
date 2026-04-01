@@ -1,6 +1,7 @@
 package com.example.hironoapps.P3
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -34,6 +35,9 @@ class ThirdActivity : AppCompatActivity() {
             //Mengambil value dari inputNama dan menampilkan di Logcat
             val noTujuan = binding.inputNoTujuan.text
             Toast.makeText(this, "Pesan Berhasil dikirim : $noTujuan", Toast.LENGTH_SHORT).show()
+
+            val halamanverified = Intent(this, ThirdResultActivity::class.java)
+            startActivity(halamanverified)
         }
     }
 }

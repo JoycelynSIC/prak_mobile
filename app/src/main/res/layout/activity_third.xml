@@ -5,20 +5,43 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D7EBFF"
+    android:background="@color/bg"
     tools:context=".P3.ThirdActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="376dp"
+        android:fontFamily="@font/playwriteie_regular"
+        android:text="@string/judul"
+        android:textColor="#80C2FF"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="113dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="232dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/handphone" />
 
     <Button
         android:id="@+id/btnKirim"
         android:layout_width="268dp"
         android:layout_height="58dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="524dp"
         android:backgroundTint="#80C2FF"
         android:text="Submit"
+        android:textColor="@color/btn"
         android:textSize="20dp"
         android:textStyle="bold"
         app:cornerRadius="20dp"
-        android:textColor="#F6F6F6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,28 +49,16 @@
 
     <EditText
         android:id="@+id/inputNoTujuan"
-        android:background="#147BA2C1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="296dp"
         android:layout_marginHorizontal="20dp"
-        android:textColor="#5B82BC"
+        android:layout_marginTop="476dp"
+        android:background="@color/input"
         android:ems="10"
         android:inputType="text"
-        android:text="Isi yeah"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:text="Haloooo! ✨"
-        android:textColor="#80C2FF"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:text=""
+        android:textColor="#5B82BC"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Hirono Apps</string>
+    <string name="judul"> Welcome! ✨</string>
+    <string name="judulLogin"> Kode berhasil dikirim!</string>
+    <string name="anakjudullogin">Silahkan periksa nomor Anda</string>
 </resources>
