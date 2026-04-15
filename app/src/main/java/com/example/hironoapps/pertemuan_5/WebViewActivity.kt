@@ -1,6 +1,8 @@
 package com.example.hironoapps.pertemuan_5
 
 import android.os.Bundle
+import android.webkit.WebChromeClient
+import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hironoapps.R
@@ -17,10 +19,21 @@ class WebViewActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Web Merdeka"
+            setDisplayShowTitleEnabled(false)
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back_black)
+            binding.webView.isNestedScrollingEnabled = true
+        }
+
+        binding.webView.webChromeClient = object : WebChromeClient() {
+            override fun onProgressChanged(view: WebView?, newProgress: Int) {
+                if (newProgress < 100) {
+                    binding.tvToolbarTitle.text = "Loading $newProgress%"
+                } else {
+                    binding.tvToolbarTitle.text = "WEB MERDEKA"
+                }
+            }
         }
 
         binding.webView.webViewClient = WebViewClient()
@@ -29,14 +42,13 @@ class WebViewActivity : AppCompatActivity() {
 
         binding.webView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
             if (scrollY > oldScrollY) {
-                binding.appBar.setExpanded(false, true) // sembunyikan toolbar
+                binding.appBar.setExpanded(false, true) // sembunyikan
             } else if (scrollY < oldScrollY) {
-                binding.appBar.setExpanded(true, true) // tampilkan toolbar
+                binding.appBar.setExpanded(true, true) // tampilkan
             }
         }
     }
 
-    // 4. Mengaktifkan navigasi tombol 'Back' di Toolbar (panah kiri atas)
     override fun onSupportNavigateUp(): Boolean {
         if (binding.webView.canGoBack()) {
             binding.webView.goBack()

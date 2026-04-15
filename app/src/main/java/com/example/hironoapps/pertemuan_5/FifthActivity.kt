@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.animation.Animation
+import android.view.animation.ScaleAnimation
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hironoapps.R
@@ -24,6 +26,33 @@ class FifthActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+
+        binding.svWrapper.setOnScrollChangeListener { _, _, scrollY, _, _ ->
+            val totalScrollLength = binding.svWrapper.getChildAt(0).height - binding.svWrapper.height
+            binding.progressBar.apply {
+                max = totalScrollLength
+                progress = scrollY
+            }
+        }
+        startBreathingAnimation()
+
+        binding.btnWebView.setOnClickListener {
+            val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun startBreathingAnimation() {
+        val scaleAnimation = ScaleAnimation(
+            1.0f, 1.05f,
+            1.0f, 1.05f,
+            Animation.RELATIVE_TO_SELF, 0.5f,
+            Animation.RELATIVE_TO_SELF, 0.5f
+        )
+        scaleAnimation.duration = 800
+        scaleAnimation.repeatCount = Animation.INFINITE
+        scaleAnimation.repeatMode = Animation.REVERSE
+        binding.btnWebView.startAnimation(scaleAnimation)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
