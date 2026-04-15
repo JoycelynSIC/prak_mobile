@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_share"
+        android:title="Bagikan"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_appearance"
+        android:title="Tampilan"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/sub_theme_light"
+                android:title="Mode Terang" />
+            <item
+                android:id="@+id/sub_theme_dark"
+                android:title="Mode Gelap" />
+        </menu>
+    </item>
+
+</menu>
