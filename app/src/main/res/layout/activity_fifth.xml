@@ -22,7 +22,7 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_margin="12dp"
             android:background="@drawable/toolbar_glass"
-            app:navigationIcon="@drawable/ic_arrow_back_black">
+            app:navigationIcon="@drawable/ic_arrow_back">
 
             <TextView
                 android:layout_width="wrap_content"

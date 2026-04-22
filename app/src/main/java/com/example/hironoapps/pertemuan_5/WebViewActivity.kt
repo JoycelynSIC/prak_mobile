@@ -22,7 +22,7 @@ class WebViewActivity : AppCompatActivity() {
             setDisplayShowTitleEnabled(false)
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            setHomeAsUpIndicator(R.drawable.ic_arrow_back_black)
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
             binding.webView.isNestedScrollingEnabled = true
         }
 

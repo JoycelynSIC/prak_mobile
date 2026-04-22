@@ -13,14 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HironoApps">
-
         <activity
-            android:name=".pertemuan_5.WebViewActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".pertemuan_5.FifthActivity"
-            android:exported="true">
+            android:name=".AuthActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,25 +24,27 @@
         </activity>
 
         <activity
+            android:name=".pertemuan_5.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan_5.FifthActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".P4.FourthActivity"
             android:exported="false" />
-
         <activity
             android:name=".P3.ThirdResultActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".SecondActivity"
             android:exported="false" />
-
         <activity
             android:name=".P3.ThirdActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>
