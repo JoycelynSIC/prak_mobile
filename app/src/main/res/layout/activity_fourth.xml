@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
-    tools:context=".P4.FourthActivity">
+    tools:context=".Home.P4.FourthActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"

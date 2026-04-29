@@ -1,4 +1,4 @@
-package com.example.hironoapps.P4
+package com.example.hironoapps.Home.P4
 
 import android.content.Intent
 import android.os.Bundle

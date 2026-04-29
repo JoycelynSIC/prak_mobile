@@ -1,4 +1,4 @@
-package com.example.hironoapps.P2
+package com.example.hironoapps.Home.P2
 
 import androidx.navigationevent.NavigationEventDispatcher
 import kotlinx.coroutines.processNextEventInCurrentThread

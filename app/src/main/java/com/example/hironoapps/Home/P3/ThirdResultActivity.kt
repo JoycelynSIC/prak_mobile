@@ -1,4 +1,4 @@
-package com.example.hironoapps.P3
+package com.example.hironoapps.Home.P3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

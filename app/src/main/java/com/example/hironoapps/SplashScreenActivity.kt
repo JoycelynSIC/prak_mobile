@@ -22,7 +22,7 @@ class SplashScreenActivity : AppCompatActivity() {
         }
 
         //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
-        val sharedPref = getSharedPreferences("user_pref ", MODE_PRIVATE)
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         //Kondisi jika isLogin bernilai true
         val isLogin = sharedPref.getBoolean("isLogin", false)
