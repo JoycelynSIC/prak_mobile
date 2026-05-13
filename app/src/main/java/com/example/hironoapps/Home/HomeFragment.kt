@@ -14,6 +14,7 @@ import com.example.hironoapps.Home.P3.ThirdActivity
 import com.example.hironoapps.Home.P4.FourthActivity
 import com.example.hironoapps.Home.pertemuan_5.FifthActivity
 import com.example.hironoapps.Home.pertemuan_7.SeventhActivity
+import com.example.hironoapps.Home.pertemuan_9.NinthActivity
 import com.example.hironoapps.R
 import com.example.hironoapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -83,6 +84,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToSecond.setOnClickListener{
             val intent = Intent(requireContext(), SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToNinth.setOnClickListener{
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
 
