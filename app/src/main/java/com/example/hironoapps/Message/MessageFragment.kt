@@ -1,14 +1,12 @@
 package com.example.hironoapps.Message
 
-import android.content.Context.MODE_PRIVATE
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.hironoapps.Message.tutorial.TutorialMessageActivity
 import com.example.hironoapps.R
-import com.example.hironoapps.databinding.FragmentHomeBinding
 import com.example.hironoapps.databinding.FragmentMessageBinding
 
 class MessageFragment : Fragment() {
@@ -35,12 +33,28 @@ class MessageFragment : Fragment() {
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
-            title = "Home"
+            title = "Message"
         }
+        setHasOptionsMenu(true)
+
         val adapter = MessageAdapter(requireContext(), messageList)
         binding.listMessageItems.adapter = adapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.message_toolbar_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_tutorial -> {
+                val intent = Intent(requireContext(), TutorialMessageActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
