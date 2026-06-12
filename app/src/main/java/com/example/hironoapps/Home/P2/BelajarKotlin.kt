@@ -1,8 +1,5 @@
 package com.example.hironoapps.Home.P2
 
-import androidx.navigationevent.NavigationEventDispatcher
-import kotlinx.coroutines.processNextEventInCurrentThread
-
 fun main(){
     println("Hai rekan rekam...")
     println("Selamat datang di bahasa pemrograman Kotlin")

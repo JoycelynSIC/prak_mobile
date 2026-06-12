@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.hironoapps.Home.HomeFragment
 import com.example.hironoapps.Message.MessageFragment
 import com.example.hironoapps.More.MoreFragment
+import com.example.hironoapps.Note.FragmentNote
 import com.example.hironoapps.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -34,6 +35,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.message -> {
                     replaceFragment(MessageFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(FragmentNote())
                     true
                 }
                 R.id.more -> {
