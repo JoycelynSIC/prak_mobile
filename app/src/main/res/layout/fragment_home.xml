@@ -59,6 +59,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    app:layout_gravity="fill"
                     android:backgroundTint="@color/input"
                     android:text="Activity 2"
                     android:textColor="@color/white"
@@ -69,6 +70,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    app:layout_gravity="fill"
                     android:backgroundTint="@color/input"
                     android:text="Activity 3"
                     android:textColor="@color/white"
@@ -79,6 +81,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    app:layout_gravity="fill"
                     android:backgroundTint="@color/input"
                     android:text="Activity 4"
                     android:textColor="@color/white"
@@ -89,6 +92,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    app:layout_gravity="fill"
                     android:backgroundTint="@color/input"
                     android:text="Activity 5"
                     android:textColor="@color/white"
@@ -99,6 +103,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    app:layout_gravity="fill"
                     android:backgroundTint="@color/input"
                     android:text="Activity 7"
                     android:textColor="@color/white"
@@ -109,6 +114,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    app:layout_gravity="fill"
                     android:backgroundTint="@color/input"
                     android:text="Activity 9"
                     android:textColor="@color/white"
@@ -116,15 +122,25 @@
 
                 <Button
                     android:id="@+id/btnToTenth"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    app:layout_gravity="fill"
                     android:backgroundTint="@color/input"
-                    android:paddingHorizontal="32dp"
                     android:text="Activity 10"
                     android:textColor="@color/white"
-                    app:layout_columnSpan="2"
-                    app:layout_gravity="center" />
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnToThirteenth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:layout_gravity="fill"
+                    android:backgroundTint="@color/input"
+                    android:text="Activity 13"
+                    android:textColor="@color/white"
+                    app:layout_columnWeight="1" />
 
             </androidx.gridlayout.widget.GridLayout>
 

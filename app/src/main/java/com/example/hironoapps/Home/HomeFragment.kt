@@ -14,6 +14,7 @@ import com.example.hironoapps.Home.P2.SecondActivity
 import com.example.hironoapps.Home.P3.ThirdActivity
 import com.example.hironoapps.Home.P4.FourthActivity
 import com.example.hironoapps.Home.pertemuan_10.TenthActivity
+import com.example.hironoapps.Home.pertemuan_13.ThirteenthActivity
 import com.example.hironoapps.Home.pertemuan_5.FifthActivity
 import com.example.hironoapps.Home.pertemuan_7.SeventhActivity
 import com.example.hironoapps.Home.pertemuan_9.NinthActivity
@@ -103,6 +104,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToTenth.setOnClickListener{
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToThirteenth.setOnClickListener{
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 
