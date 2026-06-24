@@ -21,22 +21,22 @@ class SplashScreenActivity : AppCompatActivity() {
             insets
         }
 
-        //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
+        // Kode ini harus selalu dipanggil saat butuh akses "user_pref"
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
-        //Kondisi jika isLogin bernilai true
+        // Kondisi jika isLogin bernilai true
         val isLogin = sharedPref.getBoolean("isLogin", false)
-        if (isLogin) {
-            val intent = Intent(this, BaseActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
+        
         lifecycleScope.launch {
-            delay(2000) //simulasi pengambilan data selama 2 detik
-
-            var intent = Intent(this@SplashScreenActivity, AuthActivity::class.java)
-            startActivity(intent)
+            delay(2000) // simulasi loading 2 detik
+            
+            if (isLogin) {
+                val intent = Intent(this@SplashScreenActivity, BaseActivity::class.java)
+                startActivity(intent)
+            } else {
+                val intent = Intent(this@SplashScreenActivity, AuthActivity::class.java)
+                startActivity(intent)
+            }
             finish()
         }
 
